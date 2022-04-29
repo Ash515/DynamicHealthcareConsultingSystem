@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="/static/images/icon.jpg">
+        <title>Doctors Information</title>
+        <style>
+            body{
+                background-color: aliceblue;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+          li{
+              list-style-type: none;
+          }
+          #lists{
+            box-shadow: 0 0 10px rgba(0, 0, 255, 0.219);
+            border-radius: 10px;
+background-color: white;
+width: 900px;
+height: 150px;
+padding:20px 20px 20px 20px;
+          }
+          #deg{
+              margin-top: 10px;
+          }
+          a{
+              text-decoration: none;
+              color:indigo
+          }
+        </style>
+    </head>
+    <div class="main">
+        <h3>Doctor's list for your problem</h3>
+        {% for row in data %}
+        <ul>
+            <li><a href="/detailinfo/{{row.email}}">
+                <div id="lists"><b>Name:</b> {{ row.name }}<br>
+                     <div id="deg"><b >Hospital Name</b> {{ row.hospital }}<br></div>
+                     <div id="deg"> <b>Email:</b> {{ row.email}}<br></div>
+                     <div id="deg"><b>Contact Number:</b>{{ row.phno }}<br></div>
+                     <div id="deg"><b>Speciality:</b> {{ row.speci }}</div>
+                </a>
+                </div>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+</html>

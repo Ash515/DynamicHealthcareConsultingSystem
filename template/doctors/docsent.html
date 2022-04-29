@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="/static/images/icon.jpg">
+        <script src="/static/notification.js"></script>
+        <title>Sent!</title>
+        <style>
+          body{
+              background-color: rgba(0, 0, 0, 0.788);
+              font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          }
+          .main{
+              background-color: white;
+              width:600px;
+              height:400px;
+              
+              margin-left: 450px;
+              margin-top: 100px;
+              border-radius: 30px;
+          }
+          .main h2{
+          
+            padding-top: 100px;
+            text-align: center;
+            color: green;
+            font-size: 26px;
+          }
+          #cancel{
+    padding-top: 20px;
+    color: rgb(87, 17, 17);
+    width: 30px;
+    text-align: center;
+   margin-left: 550px;
+    border-radius: 50px;
+    height: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    border-color: blueviolet;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div id="cancel"><a href="{{url_for('docmain')}}">x</a></div>
+            <h2>Sent !</h2>
+        </div>
+    </body>
+</html>

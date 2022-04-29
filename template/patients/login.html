@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="/static/images/icon.jpg">
+    <style>
+.main:after {
+    content: "";
+    display: table;
+    clear: both; 
+  }
+  .col1{
+    margin-top: 20px;
+    float:left;
+    width:650px;
+    background-image: url('/static/images/ulogin.jpg');
+  background-size: cover;
+   
+    height:500px; /* Should be removed. Only for demonstration */
+  }
+  .col2 {
+    float: right;
+    width:500px;
+    padding: 10px;
+    padding-left: 300px;
+    
+    height:500px; /* Should be removed. Only for demonstration */
+   
+  }
+  form{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 0 0 10px rgba(255, 166, 0, 0.459);
+    padding-left:100px;
+    height: 300px;
+    padding-top: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+  } 
+  form:hover{
+    background-color: rgba(0, 0, 255, 0.034);
+  }
+   #mail{
+    width:250px;
+    height:20px;
+  }
+  #pass{
+    margin-top: 10px;
+    width:250px;
+    height:20px;
+  }
+  #submit{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 10px;
+    cursor: pointer;color:white;
+    background-color: rgba(0, 128, 0, 0.541);
+  }
+  #return{
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 30px;
+    cursor: pointer;
+    color:white;
+    background-color: rgba(107, 24, 24, 0.219);
+  }
+  .but{
+    display: inline-flex;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+
+  }
+  #signin{
+  color:green;
+  font-size: 18px;
+  }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="col1"></div>
+     <div class="col2" >
+    <form action="/userlogin", method="post">
+      <h3 id="signin">Sign In</h3>
+      <input type="email" id="mail" name="u_email" placeholder="Your Email" required><br>
+      <input type="password"id="pass" name="u_psw" placeholder="Your Password" required><br>
+      <div class="but"><button type="submit" id="submit" >Log in</button></div><div class="but"><button id="return"><a href="{{url_for('index')}}">Return</a></button></div>
+      <h3><a href="{{url_for('userregistration')}}">Create Account</a></h3>
+    </form>
+    </div></div>
+</body>
+</html>

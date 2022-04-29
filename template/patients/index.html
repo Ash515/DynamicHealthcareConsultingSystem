@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <link rel="icon" href="/static/images/icon.jpg">
+        <title>Serve to Excel </title>
+        <link rel="icon" href="/static/images/icon.png">
+        <link rel="stylesheet" href="/static/index.css" type="text/css">
+        <script src="/static/index.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            
+        </style>
+    </head> 
+    <body>
+        <header>
+        <div class="header" id="head">
+            <h3>Serve to Excel  <h4 id="student"><a href="{{url_for('userlogin')}}">User</a></h4>
+                <h4 id="admin"><a href="/doctorlogin">Doctor</a></h4>
+            </h3>
+        </div></header>
+        <div class="main">
+            <div class="col1">
+           <div class="welcome"><h1 id="welcome-title"><font color="indigo">Welcome Home Doctor ! </font></h1> 
+            <h3 id="head-tag"><font color="green">A place to get a proper sugesstion and treatment.</font></h3></div>
+            
+        </div> 
+        <div class="col2" ></div>
+        </div>
+        <div class="about" id="abt">
+            <h1 id="aboutus">About Us</h1>
+            <h3 id="tagline">Serve to Excel is a patient friendly application useful for get proper advices for your health issue by 
+                <br>the proper doctors in world wide in the serving manner.<br> <h3 id="tagline1">We will solve your problems and needs.</h3></h3>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <div class="services">
+            <div class="col3">
+                 </div> 
+        <div class="col4">
+            <div class="box">
+                <div class="innerbox1" ><h2>Serve </h2>
+              
+                    <b>"Humanity stands first"</b> Serving based application every doctors from all over the world can contribute their
+                    service to the people.
+                </div><br>
+            <div class="innerbox2">
+                <h2>Solution</h2>
+                Home Doctor will gives a proper treatment plan and home remedies quickly.
+            </div><br>
+            
+            <div class="innerbox3" ><h2>Doctors</h2>
+             Doctors from worldwide can serve to normal needy people to cure their problems.
+          </div><br>
+          <div class="innerbox3" ><h2>Patients</h2>
+              
+              Patients will get the proper suggesstions and treatment plan for their health issues.
+          </div><br>
+          <div class="innerbox3" ><h2>Privacy and Maintanence</h2>
+            Maintain your user credentials safely and use this application only for valid issues. All your email id and registration number are maintained.
+        </div><br>
+  
+        </div>
+        </div>
+    </div> 
+
+
+
+
+        < <div class="freq" id="freq">
+        <div class="Faq">
+            <h1 id="faq-title">Frequently Asked Questions <br><h3 id="faq-tagline">Facing any queries, get it resolved here.</h3></h1>
+        </div>
+        <div class="faq-questions">
+            <div class="questions"> 
+             <div class="q1"><h3 id="query" onclick="answer1()">1. Is this for all people ?</h3></div>
+               <h3 id="answer1" onclick="closeing1()">📌 Yes this is for all people in the world.But only those who are having mobile or computer can able to get the benifit.</h3>
+               <h3 id="query" onclick="answer2()">2. Whether our information are stored in safe place ?</h3>
+               <h3 id="answer2" onclick="closeing2()">📌 Your information are very safe and if have any issues we will rectify that.</h3>
+               <h3 id="query" onclick="answer3()">3. Who will handle all our problems ?</h3>
+               <h3 id="answer3" onclick="closeing3()">📌 Obviosly all doctors.</h3>
+               <h3 id="query" onclick="answer4()">4. Wheather the doctors are trustable?</h3>
+               <h3 id="answer4" onclick="closeing4()">📌Yes, we will collect all the information from doctor then only we will give access to them.</h3>
+               <h3 id="query" onclick="answer5()">5. Is there any consequence will I face?</h3>
+               <h3 id="answer5" onclick="closeing5()">📌 No, you wont get any problem.Your problems are handle in high security manner.</h3>
+           </div>
+        </div>
+        </div> 
+        <div class="contact" id="con">
+            <h1 id="contact-title">Contact Us<br><h3 id="contact-tagline" >We'd love to hear from you!</h3></h1>
+        </div>
+        <div class="contact-box">
+            <div class="col5">
+         
+            </div>
+            <div class="col6">
+           <div class="form">
+               <form action="/contact" method="POST">
+                  <input placeholder="Your Name" id="name" name="name"> <input placeholder="Your Email" id="name" name="email">
+                  <input placeholder="Subject" id="subject" name="subject"><br>
+                  <textarea name="message">Message</textarea>
+                  <button id="submit" type="submit">Send</button>
+            </form>
+            </div></div>
+        </div>
+        <div class="footer">
+            <div class="footer-box">
+                <div class="col7">
+                     <h2>Serve to Excel</h2>
+                     <h3>Porur,<br>
+                         Chennai 600 122, Tamil Nadu.</h3>
+                     <h3><font color="green">Email:&nbsp;&nbsp;&nbsp;</font><i>ashwin.tech@gmail.com</i></h3>
+                     <h3><font color="green">Mobile:</font><i>7358228847</i></h3>
+
+
+                </div>
+                <div class="col8">
+                  <h2 id="social">Our Social Networks</h2>
+                  <h4 id="social-tagline">Follow us at our Social handles to get all the updates.</h4>
+                  <div class="icons"><i class="fa fa-facebook" id="fb"></i> <i class="fa fa-twitter" id="twitter"></i> <i id="instagram" class="fa fa-instagram"></i> <i id="linkedin" class="fa fa-linkedin"></i></div>
+                </div>
+                <div class="col9">
+                    <h2 id="nav">Navigate</h2>
+                      <div class="list">
+                        <a href="#head" id="nav1"><font color="black"><b>></b></font> Home</a><br><br>
+                        <a href="#abt"  id="nav2"><font color="black"><b>></b></font> About Us</a><br><br>
+                        <a href="#freq"  id="nav3"><font color="black"><b>></b></font> FAQ's</a><br><br>
+                        <a href="#con"  id="nav4"><font color="black"><b>></b></font> Contact Us</a>
+                    </div>
+                    <h3></h3>
+                </div>
+            </div></div>
+            
+            </div> 
+</body>
+</html>
+
+ 

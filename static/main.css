@@ -1,0 +1,218 @@
+body{
+    
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgba(226, 239, 240, 0.959);
+}
+.header{
+    width:1512px;
+    
+    background-color:rgba(87, 180, 99, 0.616);
+    color:white;
+    display: inline-flex;
+}
+.head-flex{
+    display: inline-flex;
+}
+.sent-flex{
+    display: inline-flex;
+    
+}
+.recieve-flex{
+    display: inline-flex;
+}
+.close{
+    position: relative;
+    top:0;
+    
+    font-size:42px;
+    transform:rotate(45deg);
+    cursor: pointer;
+    
+}
+i{
+    margin-left:1200px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+li{
+    list-style-type: none;
+}
+.nav-bar{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(225, 248, 245);
+    width:230px;
+    height: 250px;
+    padding-top: 30px;
+    margin-left: 480px;
+    margin-top:0px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+   display: none;
+   
+}
+.nav-bar h3{
+    text-align: center;
+}
+#profile{
+    background-color: rgba(0, 0, 255, 0.411);
+    color: white;
+    height:30px ;
+    padding-top: 10px;
+    width: 160px;
+    margin-left: 35px;
+    border-radius: 5px;
+    border-color: maroon;
+    border-width: thick;
+    cursor: pointer;
+}
+#profile:hover{
+    background-color: rgba(195, 0, 255, 0.26);
+    color:maroon;
+    border-width: thick;
+   
+}
+#settings{
+    background-color: rgba(0, 0, 255, 0.411);
+    color: white;
+    height:30px ;
+    padding-top: 10px;
+    width: 160px;
+    margin-left: 35px;
+    border-radius: 5px;
+    border-color: maroon;
+    border-width: thick;
+    cursor: pointer;
+}
+#settings:hover{
+    background-color: rgba(195, 0, 255, 0.26);
+    color:maroon;
+    border-width: thick;
+   
+}
+#logout{
+    background-color: rgba(0, 0, 255, 0.411);
+    color: white;
+    height:30px ;
+    padding-top: 10px;
+    width: 160px;
+    margin-left: 35px;
+    border-radius: 5px;
+    border-color: maroon;
+    border-width: thick;
+    cursor: pointer;
+}
+#logout:hover{
+    background-color: rgba(195, 0, 255, 0.26);
+    color:maroon;
+    border-width: thick;
+   
+}
+.header h3{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+#about{
+    margin-left:350px;
+    margin-top: 70px;
+    padding-left: 20px;
+    padding-top: 20px;
+    width:300px;
+    height:100px;
+    background-color: rgb(212, 212, 84);
+    border-radius: 10px;
+    color:black;
+    cursor: pointer;
+}
+#about h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+#about:hover{
+    background-color:rgba(139, 144, 214, 0.664);
+    color:black;
+}
+   
+
+.column1 {
+    float: left;
+    width:750px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgba(81, 218, 236, 0.329);
+   text-align: center;
+    height:700px; /* Should be removed. Only for demonstration */
+    background-image:url('/static/images/complain.jpg');
+    background-size:cover;
+  }
+.column2{
+    background-color: rgba(0, 255, 242, 0.589);
+    float: right;
+    width:730px;
+    height:700px;
+    margin-top: 10px;
+    background-size:cover;
+    background-image:url('/static/images/main.jpg');
+    /* Should be removed. Only for demonstration */
+  }
+ .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .image{
+      display: block;
+    background-size:cover;
+
+    height:720px;
+    background-image:url('/static/images/grievance.png');
+  }
+
+  form{
+     
+      margin-top: 30px;
+  }
+#name{margin-top: 10px;
+    width:300px;
+    height: 20px;
+}
+#age{
+    margin-top: 10px;
+    width:300px;
+    height: 20px;
+}
+#blood{
+    margin-top: 10px;
+    width:300px;
+    height: 20px;
+}
+#mobile{
+    margin-top: 10px;
+    width:300px;
+    height: 20px;
+}
+#issues{
+    margin-top: 10px;
+    width:310px;
+    height: 30px;
+}
+#description{
+    margin-top: 10px;
+    width:300px;
+    height: 100px;
+}
+#btn{
+    margin-top: 20px;
+   
+    width: 100px;
+    height: 30px;
+    background-color: green;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}

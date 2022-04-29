@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="/static/images/icon.jpg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>{{session.u_name}}</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='profile.css')}}">
+    </head>
+    <body>
+        <div id="sent-cancel"><a href="{{url_for('main')}}"><i class="fa fa-chevron-circle-left" style="font-size: 50px; "></i></a></div>
+        <div class="main">
+            
+            <div class="profile-details">
+                <table id="report">
+                 
+                      <tr>
+                        <td><b>Name</b></td>
+                        <td><b>Name</b></td>
+                     </tr>
+                     <tr>
+                         <td><b>Register</b></b>
+                        <td><b>Name</b></td>
+                    
+                    </tr>
+                     <tr>
+                         <td><b>Department</b></td>
+                        <td><b>Name</b></td>
+                    </tr>
+                     <tr>
+                         <td><b>Email</b></td>
+                        <td><b>Name</b></td>
+                    </tr>
+                     <tr>
+                         <td><b>Phone Number</b></td>
+                        <td><b>Name</b></td>
+                    </tr>
+                     <tr>
+                         <td id="address"><b>Address</b></td>
+                        <td id="address"><b>Name</b></td>
+                    </tr>
+                    
+            
+                      </table> 
+              
+            </div>
+          
+        </div>
+    </body>
+</html>

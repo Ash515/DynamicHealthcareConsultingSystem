@@ -1,0 +1,99 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.header{
+    background-color: indigo;
+    color:white;
+    height: 50px;
+    padding-top: 5px;
+    padding-left: 30px;
+ 
+}
+.header a{
+    padding-left:1200px;
+}
+.sub-header{
+    background-color:rgb(84, 159, 119);
+    height:50px;width:1505px;
+    display: inline-flex;
+}
+.sub-header h3{
+    padding-left: 50px;cursor: pointer;
+}
+.profile-main{
+    height: 1000px;
+    display: none;
+}
+/* .patient-list{
+    display: block;
+} */
+form{
+    margin-left: 600px;
+}
+#name{
+    width: 300px;
+    height: 30px;
+   
+}
+#age{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+#email{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+#phno{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+#phno2{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+#degree{
+    width: 300px;
+    height: 30px;
+ 
+}
+#speci{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+#mark{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+#certi{
+    width: 300px;
+    height: 30px;
+    margin-top: 5px;
+}
+#treat{
+    width: 305px;
+    height: 30px;
+}
+#exp{
+    width: 305px;
+    height: 30px;
+  
+}
+#btn{
+    width:310px;
+    height: 35px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+}

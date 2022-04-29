@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="/static/images/icon.jpg">
+        <title>
+            Detail Information
+        </title>
+        <style>
+        body{
+                background-color: aliceblue;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .main{
+                padding-left: 20px;
+            }
+            .info{
+               
+
+  overflow: scroll;
+                box-shadow: 0 0 10px rgba(0, 0, 255, 0.219);
+              width:800px;
+              margin-left: 300px;
+              padding-left: 100px;
+              padding-top: 20px;
+              padding-bottom: 20px;
+                background-color: white;
+                height: 700px;
+            }
+        </style>
+    </head>
+    <body>
+<div class="main">
+    {% for col in docdata %}
+    <h3>Details about {{col.name}}</h3>
+    {% endfor %}
+    
+</div>
+<div class="info">
+    {% for row in docdata %}
+    <h3>Name:&nbsp;&nbsp; {{row.name}}</h3><br>
+    <h3 id="age">Hospital Name:&nbsp;{{row.hospital}} </h3><br>
+    <h3 id="age">Age:&nbsp;&nbsp;{{row.age}}</h3><br>
+    <h3 id="age">Experience:&nbsp;&nbsp;{{row.experience}}</h3><br>
+    <h3  id="age">Degree:&nbsp;&nbsp;{{row.degree}} </h3><br>
+    <h3 id="age">Specialization:&nbsp;&nbsp;{{row.speci}}</h3><br>
+    <h3 id="age">Email:&nbsp;&nbsp; {{row.email}}</h3><br>
+    <h3 id="age">Mobile Number:&nbsp;&nbsp;{{row.phno}}</h3><br>
+    <h3 id="age">Alternate Number:&nbsp;&nbsp;{{row.phno2}} </h3><br>
+    <h3 id="age">University:&nbsp;&nbsp;{{row.college}}</h3><br>
+    <h3 id="age">Rank:&nbsp;&nbsp;{{row.rank}} </h3><br>
+    <h3 id="age">Marksheet:&nbsp;&nbsp;{{row.marksheet}}</h3><br>
+    <h3 id="age">Certificates:&nbsp;&nbsp;{{row.certificate}} </h3><br>
+    
+{% endfor %}
+</div>
+    </body>
+</html>
