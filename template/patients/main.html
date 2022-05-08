@@ -17,13 +17,15 @@
         <a href="#" onclick="mainnavbar()" id="navbar"
           ><i class="fa fa-bars"></i
         ></a>
-      </h3>
+      </h3> 
     </div>
     <div class="subheader">
         <ul>
-            <h3><li>Media</li></h3>
+            <h3><li><a href="{{url_for('media')}}" target="_blank" id="browse">Media</a></li></h3>
           <h3><li>Pharmacy</li></h3>
-          <h3><li>Browse</li></h3>
+          <h3><li><a href="{{url_for('browseengine')}}" target="_blank" id="browse">Browse</a></li></h3>
+          
+          </ul>
     </div>
     <div class="search">
         <input type="search" id="myInput" onkeyup="myFunction()" placeholder="Enter the Issues" title="Type in a name">

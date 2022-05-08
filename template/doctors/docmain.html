@@ -12,120 +12,43 @@
   </div>
   
   <div class="sub-header">
-   <div onclick="profile()"><h3>Profile1</h3></div>  <h3>Profile</h3> <h3>Profile</h3>  <h3>Profile</h3> <h3>Profile</h3>  <h3>Profile</h3> 
+   <ul>
+     <li><b><a href="{{url_for('profileupdate')}}" target="_blank">Update Profile</a></b></li>
+     <li><b><a href="#">Payments</a></b></li>
+     <li><b><a href="#">Medical Prescription Portal</a></b></li>
+     {% for i in docmeeting %}
+     <li><b><a href="{{i.docmeet}}" target="_blank">Give Counselling</a></b></li>
+     {% endfor %}
+   </ul>
   </div>
 
 
 <div class="patient-list">
 
-  <h2>  Hello these are patient-list</h2>
+  <h2> <center>Councelling List</center></h2>
+  <ul>
+    {% for row in bookingList %}
+    <li>
+       <div class="councelling-data">
+           <b>Name:</b> {{row.name}} <br>
+           
+           <b> Email Address:</b> {{row.email}}<br>
+           <b> Phone Number:</b> {{row.docphno}}<br>
+           <b> Issues:</b> {{row.issues}}<br>
+           <b>Days:</b>{{row.days}}<br>
+           <b>Dates:</b>{{row.dates}}<br><br>
+           <p><a href="mailto:{{row.email}}"><b><font-color="indigo">Reply</font-color></b></a></p>
+           
+         
+        </div>
+    </li><br>
+    {% endfor %}
+ </ul>
 </div>
 
 
 
 
 
-  <div class="profile-main">
-    <form method="POST" action="">
-      <h4>Basic Information</h4>
-      <input id="name" name="d_name" placeholder="Your Name" required /><br />
-      <input id="age" name="d_age" placeholder="Your Age" required /><br />
-      <input
-        type="email"
-        id="email"
-        name="d_email"
-        placeholder="Your Email"
-        required
-      /><br />
-      <input
-        id="phno"
-        name="d_phno"
-        placeholder="Your Phone Number"
-        required
-      /><br />
-      <input
-        id="phno2"
-        name="d_phno2"
-        placeholder="Your Alternate Phonenumber"
-        required
-      /><br />
-
-      <h4>Education</h4>
-      <br />
-      <input
-        id="degree"
-        name="d_degree"
-        placeholder="Your Degree"
-        required
-      /><br />
-      <input
-        id="speci"
-        name="d_speci"
-        placeholder="Your Specialization"
-        required
-      /><br />
-      <input
-        id="speci"
-        name="d_clg"
-        placeholder="University Name"
-        required
-      /><br />
-      <input
-        id="speci"
-        name="d_rank"
-        placeholder="Rank or Percentage"
-        required
-      /><br />
-
-      <h4>Experience</h4>
-      <br />
-      <input
-        id="exp"
-        name="d_exp"
-        placeholder="Your Years of Experience"
-        required
-      /><br />
-      <input
-        id="exp"
-        name="d_hosp"
-        placeholder="Hospital Name"
-        required
-      /><br />
-      <h4>Treatment Category</h4>
-      <input
-        id="exp"
-        name="d_treat"
-        placeholder="Treatment Type"
-        required
-      /><br />
-      <br />
-      <h4>Fees Details</h4>
-      <br />
-
-      <input
-        id="exp"
-        name="d_fees"
-        placeholder="Fee for per member"
-        required
-      /><br />
-
-      <h4>Meet Details</h4>
-      <br />
-
-      <input id="exp" name="d_meet" placeholder="Meet Link" required /><br />
-      <input
-        id="exp"
-        name="d_days"
-        placeholder="Available Days"
-        required
-      /><br />
-      <input
-        id="exp"
-        name="d_time"
-        placeholder="Available Timings"
-        required
-      /><br />
-     <button type="submit" id="btn">Submit</button>
-    </form>
-  </div>
+  
 </html>

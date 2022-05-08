@@ -1,0 +1,41 @@
+*{
+  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background-color: white;
+}
+.main{
+    margin-left: 500px;
+}
+#content-field{
+width:500px;height:50px;
+}
+#post{
+    background-color: green;
+    color:white;
+    width:100px;height: 50px;
+    cursor: pointer;
+}
+.posts{
+    width:610px;
+    height:300px;
+    background-color: aliceblue;
+    border-radius: 10px;
+} #email{
+    padding-left: 20px;
+    padding-top: 5px;
+}
+#date{
+    padding-left: 300px;
+    padding-top: 5px;
+}
+.date-email{
+display: inline-flex;
+
+}
+#content{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+}

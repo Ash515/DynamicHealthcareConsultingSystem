@@ -4,6 +4,7 @@ import io
 import PIL
 from PIL import Image
 from MySQLdb import connections
+from django.shortcuts import render
 from flask import Flask,send_file, render_template,send_file,url_for,redirect,flash, request, redirect,session
 from flask.wrappers import Response
 from flask_sqlalchemy import SQLAlchemy
@@ -85,7 +86,7 @@ def userregistration():
 @app.route('/main',methods=['POST','GET'])
 @login_manager.user_loader
 
-def main():
+def main(): 
     if 'loggedin' in session:
         email=session['u_email']
         cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
@@ -129,9 +130,31 @@ def userlogout():
    return redirect(url_for('index'))
 
 
-@app.route('/sent')
+@app.route('/sent') 
 def sent():
     return render_template('/patients/notification.html')
+
+@app.route('/browseengine')
+def browseengine():
+    return render_template("/patients/Browse.html")
+
+
+@app.route('/media')
+def media():
+    
+    cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursor.execute("Select * from dataset")
+    posts=cursor.fetchall()
+    return render_template('/patients/Media.html',posts=posts)
+
+
+
+
+
+
+
+
+
 
 @app.route('/doctorlogin',methods=['POST','GET'])
 def doctorlogin():
@@ -147,6 +170,7 @@ def doctorlogin():
             session['loggedin'] = True
             session['admin_psw'] = admin['docpass']
             session['admin_email'] = admin['docemail']
+            session['admin_name'] = admin['docname']
             return redirect(url_for('docmain'))
         else:
             # Account doesnt exist or username/password incorrect
@@ -183,37 +207,18 @@ def doctorregistration():
     return render_template('doctors/docsignup.html')
 
 @app.route('/docmain',methods=['GET','POST'])
-
-
 def docmain():
     if 'loggedin' in session:
-        if request.method=='POST':
-            dname=request.form['d_name']
-            dage=request.form['d_age']
-            demail=request.form['d_email']
-            dphno=request.form['d_phno']
-            dphno2=request.form['d_phno2']
-            ddegree=request.form['d_degree']
-            dspeci=request.form['d_speci']
-            dclg=request.form['d_clg']
-            drank=request.form['d_rank']
-            dexp=request.form['d_exp']
-            dhosp=request.form['d_hosp']
-            dtreat=request.form['d_treat']
-            dfees=request.form['d_fees']
-            dmeet=request.form['d_meet']
-            ddays=request.form['d_days']
-            dtiming=request.form['d_time']
-            
-          
-           
-            cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-            cursor.execute('INSERT INTO docprofile VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)',(dname,dage,demail,dphno,dphno2,ddegree,dspeci,dclg,drank,dexp,dhosp,dtreat,dfees,dmeet,ddays,dtiming))
-            mysql.connection.commit()
-            return redirect(url_for('docsent'))
+        demail=session['admin_email']
+        cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute('SELECT * FROM bookings WHERE demail=%s',(demail,))
+        bookingList=cursor.fetchall()
+        cursor.execute('select docmeet from docprofile where docemail=%s',(demail,))
+        docmeeting=cursor.fetchall()
+        
 
        
-        return render_template('/doctors/docmain.html')
+        return render_template('/doctors/docmain.html',bookingList=bookingList,docmeeting=docmeeting)
     else:
         return render_template('/doctors/docmain.html')
 
@@ -237,6 +242,38 @@ def detailinfo(id):
     docdata=cursor.fetchall()
 
     return render_template('/doctors/information.html',docdata=docdata)
+
+
+@app.route("/profileupdate",methods=['POST','GET'])
+def profileupdate():
+    if request.method=='POST':
+            dname=request.form['d_name']
+            dage=request.form['d_age']
+            demail=request.form['d_email']
+            dphno=request.form['d_phno']
+            dphno2=request.form['d_phno2']
+            ddegree=request.form['d_degree']
+            dspeci=request.form['d_speci']
+            dclg=request.form['d_clg']
+            drank=request.form['d_rank']
+            dexp=request.form['d_exp']
+            dhosp=request.form['d_hosp']
+            dtreat=request.form['d_treat']
+            dfees=request.form['d_fees']
+            dmeet=request.form['d_meet']
+            ddays=request.form['d_days']
+            dtiming=request.form['d_time']
+            dstatus=request.form['d_status']
+            cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+            cursor.execute('INSERT INTO docprofile VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)',(dname,dage,demail,dphno,dphno2,ddegree,dspeci,dclg,drank,dexp,dhosp,dtreat,dfees,dmeet,ddays,dtiming,dstatus))
+            mysql.connection.commit()
+            return redirect(url_for('docsent'))
+    return render_template('/doctors/docprofileupdate.html')
+
+
+
+
+
 
 @app.route('/contact',methods=['POST','GET'])
 def contact():

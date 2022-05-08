@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Browse Engine</title>
+        <link rel="icon" href="/static/images/icon.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="/static/Media.css" />
+    
+    </head>
+    <body>
+        <div class="name-title">
+            <h3>Hi {{session.u_email}} !</h3>
+        </div>
+       
+     <div class="main">
+         <div class="add-content">
+             <form method="post" action="/browseengine">
+                 <input type="search" id="content-field" placeholder="Write Something...">
+                 <input type="submit" value="Search" id="post">
+                </form>
+         </div>
+         <div class="posts">
+             {% for i in posts %}
+                  <div class="date-email"><h3 id="email">{{i.email}}</h3><h3 id="date">{{i.date}}</h3></div>
+                  <h3 id="content">{{i.content}}</h3>
+             {% endfor %}
+         </div>
+
+     </div>
+    </body>
+</html>

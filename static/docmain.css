@@ -19,81 +19,34 @@ a{
 }
 .sub-header{
     background-color:rgb(84, 159, 119);
-    height:50px;width:1505px;
+    height:50px;width:1500px;
     display: inline-flex;
 }
 .sub-header h3{
     padding-left: 50px;cursor: pointer;
 }
-.profile-main{
-    height: 1000px;
-    display: none;
+
+.sub-header ul{
+    display: inline-flex;
+    list-style: none;
 }
-/* .patient-list{
-    display: block;
-} */
-form{
-    margin-left: 600px;
+.sub-header li{
+    margin-left: 30px;
+    font-style: bold;
 }
-#name{
-    width: 300px;
-    height: 30px;
-   
+.councelling-data{
+    width:500px;
+    height: 200px;
+    padding-left: 50px;
+    padding-top: 20px;
+    margin-left: 500px;
+    background-color: rgb(225, 239, 225);
+    border-radius: 10px;
+
 }
-#age{
-    width: 300px;
-    height: 30px;
-    margin-top: 10px;
+ul li{
+    list-style: none;
 }
-#email{
-    width: 300px;
-    height: 30px;
-    margin-top: 10px;
-}
-#phno{
-    width: 300px;
-    height: 30px;
-    margin-top: 10px;
-}
-#phno2{
-    width: 300px;
-    height: 30px;
-    margin-top: 10px;
-}
-#degree{
-    width: 300px;
-    height: 30px;
- 
-}
-#speci{
-    width: 300px;
-    height: 30px;
-    margin-top: 10px;
-}
-#mark{
-    width: 300px;
-    height: 30px;
-    margin-top: 10px;
-}
-#certi{
-    width: 300px;
-    height: 30px;
-    margin-top: 5px;
-}
-#treat{
-    width: 305px;
-    height: 30px;
-}
-#exp{
-    width: 305px;
-    height: 30px;
-  
-}
-#btn{
-    width:310px;
-    height: 35px;
-    background-color: green;
-    color: white;
-    cursor: pointer;
-    margin-top: 15px;
-}
+.patient-list ul li a{
+    color:indigo;
+} 

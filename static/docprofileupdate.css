@@ -1,0 +1,72 @@
+.profile-main{
+    height: 1000px;
+   
+}
+/* .patient-list{
+    display: block;
+} */
+form{
+    margin-left: 600px;
+}
+#name{
+    width: 300px;
+    height: 30px;
+   
+}
+#age{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+#email{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+#phno{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+#phno2{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+#degree{
+    width: 300px;
+    height: 30px;
+ 
+}
+#speci{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+#mark{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+#certi{
+    width: 300px;
+    height: 30px;
+    margin-top: 5px;
+}
+#treat{
+    width: 305px;
+    height: 30px;
+}
+#exp{
+    width: 305px;
+    height: 30px;
+  
+}
+#btn{
+    width:310px;
+    height: 35px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+}

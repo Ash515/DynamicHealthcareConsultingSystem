@@ -1,0 +1,134 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+.header{
+    background-color: crimson;
+    color:white;
+    height: 50px;
+    padding-left: 50px;
+    padding-bottom:10px ;
+    padding-top: 5px;
+    font-size: 18px;
+}
+.about{
+    display: flex;
+    background-color: rgba(32, 4, 16, 0.932);
+    box-shadow: 0 10px blue;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.219);
+    width:800px;
+    height: 80px;
+    margin-left: 350px;
+    margin-top: 20px;
+    padding: 20px 20px 20px 20px;
+    color:white;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.main{
+  
+    background-color: white;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.219);
+    width:800px;
+    height: 350px;
+    margin-left: 350px;
+    margin-top: 20px;
+   
+}
+#issues{
+    margin-left: 30px;
+    width:300px;
+    height: 30px;
+    display: inline-flex;
+}
+.get-btn{
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 165px;margin-right: 335px;
+    text-align: center;
+    padding-top:5px;
+    background-color: rgba(21, 146, 83, 0.966);
+    height: 30px;
+    color:white;
+    border-radius: 5px;
+}
+.get-btn:hover{
+    background-color: rgba(21, 146, 84, 0.781);
+}
+#textarea{
+    margin-left: 165px;
+    margin-top: 20px;
+    width:293px;
+    height: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+
+}
+#footer{
+    margin-left:705px;
+}
+@media only screen and (max-width:1500px){
+    .header{
+   
+    background-color:rgb(122, 177, 132);
+    color: white;
+}
+.about{
+    margin-left: 100px;
+}
+.main{
+    margin-left: 100px;
+}
+#footer{
+    margin-left:405px;
+}
+}
+
+@media only screen and (max-width:1000px){
+    .header{
+   
+    background-color:rgb(137, 122, 177);
+    color: white;
+}
+.about{
+    margin-left: 70px;
+}
+.main{
+    margin-left: 70px;
+}
+#footer{
+    margin-left:405px;
+}
+}
+
+
+@media only screen and (max-width:600px){
+    .header{
+   
+    background-color:rgb(55, 189, 79);
+    color: white;
+}
+.about{
+    margin-left: 30px;
+    width:350px;
+    font-size: 16px;
+}
+.main{
+    margin-left: 30px;
+    width:350px;
+}
+.get-btn{
+  margin-left: 30px;
+  margin-right: 20px;
+}
+#textarea{
+    width:290px;
+    margin-left: 30px;
+}
+#footer{
+    margin-left:150px;
+}
+}
