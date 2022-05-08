@@ -14,7 +14,7 @@ import re
 from flask_login import login_required
 from flask_login import LoginManager
 from flask_login import *
-
+from datetime import *
 
 app=Flask(__name__,template_folder='template')
 app.secret_key="key"
@@ -139,13 +139,23 @@ def browseengine():
     return render_template("/patients/Browse.html")
 
 
-@app.route('/media')
+@app.route('/media',methods=['POST','GET'])
 def media():
-    
+    if request.method=='POST':
+        email=session['u_email']
+        content=request.form['content']
+        postdate=date.today() #request.form['date']
+        posttime=datetime.now() #request.form['time']
+        cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute("Insert into dataset values(%s,%s,%s,%s)",(email,content,postdate,posttime,))
+        mysql.connection.commit()
     cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute("Select * from dataset")
+       
     posts=cursor.fetchall()
     return render_template('/patients/Media.html',posts=posts)
+
+
 
 
 

@@ -16,17 +16,21 @@
        
      <div class="main">
          <div class="add-content">
-             <form method="post" action="/browseengine">
-                 <input type="search" id="content-field" placeholder="Write Something...">
-                 <input type="submit" value="Search" id="post">
+             <form method="post" action="/media">
+
+                
+                 <input type="search" id="content-field" name="content" placeholder="Write Something...">
+                 <input type="submit" value="Post" id="post">
                 </form>
          </div>
+         {% for i in posts %}
          <div class="posts">
-             {% for i in posts %}
+             
                   <div class="date-email"><h3 id="email">{{i.email}}</h3><h3 id="date">{{i.date}}</h3></div>
                   <h3 id="content">{{i.content}}</h3>
-             {% endfor %}
-         </div>
+            
+            
+         </div><br> {% endfor %}
 
      </div>
     </body>

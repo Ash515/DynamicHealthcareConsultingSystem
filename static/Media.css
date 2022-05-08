@@ -20,7 +20,7 @@ width:500px;height:50px;
 .posts{
     width:610px;
     height:300px;
-    background-color: aliceblue;
+    background-color: rgba(145, 154, 145, 0.493);
     border-radius: 10px;
 } #email{
     padding-left: 20px;
