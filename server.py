@@ -1,9 +1,11 @@
+
 import os
 import base64 
 import io  
 import PIL
 from PIL import Image
 from MySQLdb import connections
+from aiohttp import RequestInfo
 from django.shortcuts import render
 from flask import Flask,send_file, render_template,send_file,url_for,redirect,flash, request, redirect,session
 from flask.wrappers import Response
@@ -97,15 +99,6 @@ def main():
     
     return render_template('/patients/login.html')
 
-
-# @app.route('/profile/<id>',methods=['POST','GET'])
-# def DocProfile(id):
-#     email=session['u_email']
-#     cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-#     cursor.execute('Select * from docprofile where docemail=%s',(id,))
-#     profiledata=cursor.fetchall()
-#     return render_template('/patients/docmoreinfo.html',profiledata=profiledata)
-
 @app.route('/bookings',methods=['POST','GET'])
 def bookings():
     if request.method=='POST':
@@ -123,6 +116,16 @@ def bookings():
     return render_template('/patients/Bookings.html')
 
 
+@app.route('/product',methods=['POST','GET'])
+def product():
+    if request.method=='POST':
+        keyval=request.form['key']
+        cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute('select * from products where id=%s',(keyval,))
+        keys=cursor.fetchall()
+        return render_template('/patients/pharmacy.html',keys=keys)
+    return render_template('/patients/pharmacy.html')
+    
 
 @app.route('/userlogout')
 def userlogout():
@@ -155,9 +158,22 @@ def media():
     posts=cursor.fetchall()
     return render_template('/patients/Media.html',posts=posts)
 
+@app.route('/deliverydetails',methods=['POST','GET'])
+def deliverydetails():
+    if request.method=='POST':
+        name=request.form['name']
+        email=request.form['email']
+        address=request.form['address']
+        phno=request.form['phno']
+        cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute("insert into deliverdetails values(%s,%s,%s,%s)",(name,email,address,phno,))
+        mysql.connection.commit() 
+        return redirect(url_for('Payment'))
+    return render_template('/patients/deliverydetails.html')
 
-
-
+@app.route('/payment')
+def Payment():
+    return render_template('/patients/Payment.html')
 
 
 

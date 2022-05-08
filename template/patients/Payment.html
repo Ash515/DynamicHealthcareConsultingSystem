@@ -1,0 +1,32 @@
+<html>
+    <head><title>Payment</title>
+        <link rel="icon" href="/static/images/icon.jpg" />
+  
+    <style>
+        .main{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 500px;
+            margin-top: 50px;
+            background-color: rgb(112, 244, 222);
+            width:550px;
+            height:300px;border-radius: 5px;
+            padding-left: 10px;padding-top: 10px;
+        }
+        #payment{
+    border-radius: 5px;
+    width:350px;
+    height: 40px;
+    font-size: 18px;
+    background-color: blue;
+    color:white;cursor: pointer;
+    margin-left: 90px;
+    margin-top: 50px;
+}
+    </style></head>
+    <body>
+        <div class="main">
+          <h2> Hi {{session.u_email}} pay your bill amount !</h2>
+            <button id="payment">Pay</button> 
+        </div>
+    </body>
+</html>

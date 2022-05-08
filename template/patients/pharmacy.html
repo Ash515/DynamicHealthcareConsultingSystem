@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Pharmacy</title>
+        <link rel="icon" href="/static/images/icon.jpg" />
+        <link rel="stylesheet" type="text/css" href="/static/pharmacy.css" />
+        <script src="/static/pharmacy.js"></script>
+    </head>
+    <body>
+        <h3>Hi {{session.u_email}} !</h3>
+<div class="main">
+    <div class="title"><h2>Online Pharmacy</h2></div>
+    <form method="post" action="/product">
+        <input type="search" name="key" id="key-search">
+        <input type="submit" value="search" id="search-bar">
+    </form>
+    
+
+    <div class="product">
+        
+        {% for i in keys %} 
+            <h3 id="id">Product ID</h3> {{i.id}}
+            <h3 id="name">Product Name</h3>{{i.name}}
+            <h3 id="mfd">Product Manufacture Date</h3> {{i.mfd}}
+            <h3 id="amt">Amount per unit</h3><h4 id="amount">{{i.amt}}</h4>
+           
+        {% endfor %}
+        <h3>Quantity:<input type="text" id="quantity" name="quantity"></h3>
+        <button id="btn" onclick="amount()">Generate Bill</button>
+        Total Amount:<h3 id="bill-amt"></h3>
+        
+        <h4><a href="/deliverydetails">Add Delivery Details</a></h4>
+    </div>
+</div>
+    </body>
+</html> 

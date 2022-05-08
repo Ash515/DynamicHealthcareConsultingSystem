@@ -1,0 +1,23 @@
+#key-search{
+    width:300px;height:30px;
+}
+.main{
+    margin-left: 500px;
+}
+#increment-count{
+    width:50px;
+    height: 40px;
+    font-size: 18px;
+    background-color: blue;
+    color:white;cursor: pointer;
+}
+#decrement-count{
+    width:50px;
+    height: 40px;
+    font-size: 18px;
+    background-color: blue;
+    color:white;cursor: pointer;
+}
+#btn{
+    width:100px;height:20px;
+}
