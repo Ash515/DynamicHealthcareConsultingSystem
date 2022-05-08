@@ -1,49 +1,75 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="icon" href="/static/images/icon.jpg">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>{{session.u_email}}</title>
-        <link rel="stylesheet" type="text/css" href="/static/main.css">
-        <script src="/static/main.js"></script>
-    </head>
-    <body>
-        <div class="header">
-            
-            <h3>
-                Hi {{session.u_email}}  <a href="#" onclick="mainnavbar()" id="navbar"><i class="fa fa-bars"></i></a>
-            </h3>
-           
-        </div>
-        <div class="row">
-            <div class="column1">
-            <form method="post" action="/main">
-                <input id="age" name="u_email" placeholder="Your Email" required><br>
-                <input id="name" name="u_name" placeholder="Your Name" required ><br>
-                <input id="age" name="u_age" placeholder="Your Age" required><br>
-                <input id="blood" name="u_blood" placeholder="Your Blood group" required><br>
-                <input id="mobile" name="u_mobile" placeholder="Your Phone Number" required><br>
-                <h4>Health Issues</h4>
-                <h4>Select your primary part of body</h4>
-                <select id="issues" name="u_issues" required >
-                    <option>--</option>
-                    <option>Head</option>
-                    <option>Muscles</option><option>Mouth and Tooth</option><option>Stomach</option><option>Internal issues</option>
-                    <option>Abdominal</option><option>Bones</option><option>Others</option>
-                
-                </select><br>
-                <h4>Detail information</h4>
-                <textarea id="description" name="u_msg" required>Write about your problem</textarea><br>
-                
-                
-                
-                
-                <button type="submit"  id="btn">Submit</button><br>
-           
-            </form>
+  <head>
+    <link rel="icon" href="/static/images/icon.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>{{session.u_email}}</title>
+    <link rel="stylesheet" type="text/css" href="/static/main.css" />
+    <script src="/static/main.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h3>
+        Hi {{session.u_email}}
+        <a href="#" onclick="mainnavbar()" id="navbar"
+          ><i class="fa fa-bars"></i
+        ></a>
+      </h3>
+    </div>
+    <div class="subheader">
+        <ul>
+            <h3><li>Media</li></h3>
+          <h3><li>Pharmacy</li></h3>
+          <h3><li>Browse</li></h3>
+    </div>
+    <div class="search">
+        <input type="search" id="myInput" onkeyup="myFunction()" placeholder="Enter the Issues" title="Type in a name">
+    </div>
+
+    <div class="doc-list">
+        <ul>
+            {% for row in hospdata %}
+            <li>
+               <div class="hosp-data">
+                   <b>Doctor Name:</b> {{row.docname}} <br>
+                   <b>Hospital Name:</b>  {{row.dochosp}}<br>
+                   <b>Specialization :</b>  {{row.docspeci}}. <br>
+                   <b> Email Address:</b> {{row.docemail}}<br>
+                   <b> Phone Number:</b> {{row.docphno}}<br>
+                   <b> Alternate Phone Number:</b> {{row.docphno2}}<br>
+                   
+                   <b>Status:</b>{{row.status}}<br>
+                   <b> <a href="{{row.docmeet}}" target="_blank">Meet Here</a></b><br>
+                 <div class="doctors-moreinfo"><a href="/bookings">Book Now</div>
+                 
                 </div>
-                <div class="column2">
-                     
-                </div></div>
-         </body>
+            </li><br>
+            {% endfor %}
+         </ul>
+       </div>
+       <script>
+        function myFunction() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("hosp-data");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }       
+          }
+        }
+        </script>
+
+  </body>
 </html>

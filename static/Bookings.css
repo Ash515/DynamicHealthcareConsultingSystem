@@ -1,0 +1,16 @@
+.book{
+    margin-left: 650px;
+    margin-top: 50px;
+}
+#submit{
+    width:100px;
+    margin-left: 50px;
+    background-color:goldenrod;
+    color:white;
+    cursor: pointer;
+
+}
+input{
+    width:200px;
+    height:30px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head><title>{{session.u_email}}</title>
+        <link rel="icon" href="/static/images/icon.jpg" />
+        <link rel="stylesheet" type="text/css" href="/static/docmoreinfo.css" /></head>
+
+    <body>
+        <div class="profile">
+            <ul>
+                {% for row in profiledata %}
+                <li>
+                   <div class="hosp-data">
+                    
+                    <b>Name:</b>{{row.docname}}<br>
+                    <b>Email ID:</b>ram@xyz.com<br>
+                    <b>Phone Number:</b>Ram J<br>
+                    <b>Alternate Phone Number:</b>Ram J<br>
+                    <b>Specialization:</b>Ram J<br>
+                    <b>Degree:</b>Ram J<br>
+                    <b>College Name:</b>Ram J<br>
+                    <b>Hospital Name:</b>Ram J<br>
+                    <b>Experience:</b>Ram J<br>
+                    <b>Consultancy Fees:</b>Ram J<br>
+                    <b>Consulting Days:</b>Ram J<br>
+                    <b>Consulting Timings:</b>Ram J<br>
+                    
+                    </div>
+                </li><br>
+                {% endfor %}
+             </ul>
+           
+        </div>
+
+        
+
+
+    </body>
+</html>

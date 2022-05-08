@@ -15,9 +15,6 @@ from flask_login import LoginManager
 from flask_login import *
 
 
-
-
-
 app=Flask(__name__,template_folder='template')
 app.secret_key="key"
 app.config['MYSQL_HOST']="localhost"
@@ -30,10 +27,6 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 
 		
-
-
-
-
 @app.route('/')
 def index():
   return render_template('patients/index.html')
@@ -91,31 +84,44 @@ def userregistration():
 
 @app.route('/main',methods=['POST','GET'])
 @login_manager.user_loader
-#@login_required
+
 def main():
     if 'loggedin' in session:
         email=session['u_email']
-        if request.method=='POST':
-            useremail=request.form['u_email']
-            username=request.form['u_name']
-            userage=request.form['u_age']
-            userblood=request.form['u_blood']
-            usermobile=request.form['u_mobile']
-            usersymptoms=request.form['u_issues']
-            usermessage=request.form['u_msg']
-            cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-            cursor.execute('INSERT INTO problems VALUES(%s,%s,%s,%s,%s,%s,%s)',(useremail,username,userage,userblood,usermobile,usersymptoms,usermessage))
-            mysql.connection.commit()
-            cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-            cursor.execute('Select * from docinfo where treatment=%s',(usersymptoms,)) 
-            data=cursor.fetchall()
-            return render_template('/doctors/result.html',data=data)
-            
-
-        return render_template('/patients/main.html')
+        cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute('Select * from docprofile')
+        hospdata=cursor.fetchall()
+        return render_template('/patients/main.html',hospdata=hospdata)
      
     
     return render_template('/patients/login.html')
+
+
+# @app.route('/profile/<id>',methods=['POST','GET'])
+# def DocProfile(id):
+#     email=session['u_email']
+#     cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+#     cursor.execute('Select * from docprofile where docemail=%s',(id,))
+#     profiledata=cursor.fetchall()
+#     return render_template('/patients/docmoreinfo.html',profiledata=profiledata)
+
+@app.route('/bookings',methods=['POST','GET'])
+def bookings():
+    if request.method=='POST':
+       
+        name=request.form['name']
+        email=request.form['email']
+        demail=request.form['demail']
+        issues=request.form['issues']
+        days=request.form['cdays']
+        dates=request.form['cdates']
+        cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute('INSERT INTO bookings VALUES (%s, %s, %s,%s,%s,%s)', ( name,email,demail,issues,days,dates))
+        mysql.connection.commit()
+        return render_template("/patients/bookednotify.html")
+    return render_template('/patients/Bookings.html')
+
+
 
 @app.route('/userlogout')
 def userlogout():
