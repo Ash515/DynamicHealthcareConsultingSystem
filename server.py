@@ -1,4 +1,3 @@
-
 import os
 import base64 
 import io  
@@ -171,8 +170,22 @@ def deliverydetails():
         return redirect(url_for('Payment'))
     return render_template('/patients/deliverydetails.html')
 
-@app.route('/payment')
+@app.route('/payment',methods=['POST','GET'])
 def Payment():
+    if request.method=='POST':
+        cardno=request.form['cardno']
+        cardname=request.form['cardname']
+        email=session['u_email']
+        paiddate=date.today()
+        amount=request.form['amt']
+        docemail=request.form['docmail']
+        cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute("insert into payment values(%s,%s,%s,%s,%s,%s)",(email,cardname,cardno,amount,paiddate,docemail,))
+        mysql.connection.commit() 
+        return redirect(url_for('sent'))
+    
+        
+        # return render_template('/patients/notification.html',paymentdata=paymentdata)
     return render_template('/patients/Payment.html')
 
 
@@ -296,10 +309,15 @@ def profileupdate():
             return redirect(url_for('docsent'))
     return render_template('/doctors/docprofileupdate.html')
 
-
+ 
 @app.route('/paymentlogs')
 def paymentlogs():
-    return render_template('/doctors/Paymentlogs.html')
+    cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    docemail=session['admin_email']
+    cursor.execute("select * from payment where docemail=%s",(docemail,))
+    paymentdata=cursor.fetchall()
+    return render_template('/doctors/Paymentlogs.html',paymentdata=paymentdata)
+
 
 
 

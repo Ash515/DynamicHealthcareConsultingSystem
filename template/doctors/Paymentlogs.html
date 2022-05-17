@@ -55,26 +55,34 @@
        </div>
        <div class="name"> <h3>Hi {{ session.admin_email }}</h3></div>
     <table id="report">
+        
         <tr>
           <th>Email ID</th>
-          <th>Phone Number</th>
+          <th>Name</th>
           <th>Amount Paid</th>
           <th>Date</th>
 
           </tr>
-          <ul>
-          
-              <li>
-          <tr>
-            <td>dfsf</td>
-            <td>sdsdfsfd</td>
-            <td>swded</td>
-            <td>swded</td>
-        </tr>
-        </li>
-      
-    </ul>
 
+          <ul>
+            {% for i in paymentdata %}
+              <li>
+                
+                
+          <tr>
+          
+            <td>{{ i.email }}</td>
+            <td>{{ i.name }}</td>
+            <td>{{ i.amount }}</td>
+            <td>{{ i.date }}</td>
+            
+        </tr>
+        
+        </li>
+        {% endfor %}
+        
+    </ul>
+   
           </table> 
 </body>
 </html>

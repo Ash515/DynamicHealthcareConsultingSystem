@@ -5,11 +5,11 @@
     <style>
         .main{
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            margin-left: 500px;
+            margin-left: 350px;
             margin-top: 50px;
             background-color: rgb(112, 244, 222);
-            width:550px;
-            height:300px;border-radius: 5px;
+            width:850px;
+            height:550px;border-radius: 5px;
             padding-left: 10px;padding-top: 10px;
         }
         #payment{
@@ -19,14 +19,43 @@
     font-size: 18px;
     background-color: blue;
     color:white;cursor: pointer;
-    margin-left: 90px;
+    margin-left: 230px;
     margin-top: 50px;
 }
+input{
+    width:300px;
+    height:30px;
+}
+#cname{
+    margin-left: 250px;
+}
+#name{
+    margin-left: 250px;
+}
+#cvv{
+    margin-left: 250px;
+ }
+#amt{
+    margin-left: 240px;
+}
+#docmail{
+    margin-left: 250px;
+}
+h3{
+margin-left: 250px;}
+
     </style></head>
     <body>
         <div class="main">
-          <h2> Hi {{session.u_email}} pay your bill amount !</h2>
-            <button id="payment">Pay</button> 
+          <center><h2> Hi <em>{{session.u_email}}</em> pay your bill amount !</h2></center>
+          <form action="/payment" method="post">
+            <input type="text" id="cname" name="cardno" placeholder="Card Number"><br><br>
+            <input type="text" id="name" name="cardname" placeholder="Enter your Name"><br><br>
+            <input type="password" id="cvv" name="cvv" placeholder="cvv"><br><br>
+            <h3>Amount to pay </h3>: <input id="amt" name="amt"><br><br>
+            <input type="text" id="docmail" name="docmail" placeholder="Enter Doctor's Email">
+            <button id="payment">Pay</button> <br>
+        </form> 
         </div>
-    </body>
+             </body>
 </html>
