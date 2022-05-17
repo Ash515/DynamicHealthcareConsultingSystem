@@ -21,7 +21,7 @@
     </div>
     <div class="subheader">
         <ul>
-            <h3><li><a href="{{url_for('media')}}" target="_blank" id="browse">Media</a></li></h3>
+            <h3><li><a href="{{url_for('media')}}" target="_blank" id="browse">Community</a></li></h3>
           <h3><li><a href="{{url_for('product')}}" target="_blank" id="browse">Pharmacy</a></li></h3>
           <h3><li><a href="{{url_for('browseengine')}}" target="_blank" id="browse">Browse</a></li></h3>
           <h3 id="signout"><a href="/userlogout">Sign Out</a> </h3>
@@ -45,7 +45,7 @@
                    
                    <b>Status:</b>{{row.status}}<br>
                    <b> <a href="{{row.docmeet}}" target="_blank">Meet Here</a></b><br>
-                 <div class="doctors-moreinfo"><a href="/bookings">Book Now</div>
+                 <div class="doctors-moreinfo"><a href="/bookings" target="_blank">Book Now</div>
                  
                 </div>
             </li><br>

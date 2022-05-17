@@ -297,7 +297,9 @@ def profileupdate():
     return render_template('/doctors/docprofileupdate.html')
 
 
-
+@app.route('/paymentlogs')
+def paymentlogs():
+    return render_template('/doctors/Paymentlogs.html')
 
 
 

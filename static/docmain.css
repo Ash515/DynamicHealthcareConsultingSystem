@@ -7,7 +7,7 @@ a{
     color: white;
 }
 .header{
-    background-color: indigo;
+    background-color: indigo; 
     color:white;
     height: 50px;
     padding-top: 5px;
@@ -15,11 +15,11 @@ a{
  
 }
 .header a{
-    padding-left:1200px;
+    padding-left:1100px;
 }
 .sub-header{
     background-color:rgb(84, 159, 119);
-    height:50px;width:1500px;
+    height:50px;width:1520px;
     display: inline-flex;
 }
 .sub-header h3{

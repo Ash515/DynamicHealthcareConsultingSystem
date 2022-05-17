@@ -14,7 +14,7 @@
   <div class="sub-header">
    <ul>
      <li><b><a href="{{url_for('profileupdate')}}" target="_blank">Update Profile</a></b></li>
-     <li><b><a href="#">Payments</a></b></li>
+     <li><b><a href="{{url_for('paymentlogs')}}">Payments</a></b></li>
      <li><b><a href="#">Medical Prescription Portal</a></b></li>
      {% for i in docmeeting %}
      <li><b><a href="{{i.docmeet}}" target="_blank">Give Counselling</a></b></li>

@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Browse Engine</title>
+        <title>Community</title>
         <link rel="icon" href="/static/images/icon.jpg" />
     <link
       rel="stylesheet"
@@ -13,7 +13,9 @@
         <div class="name-title">
             <h3>Hi {{session.u_email}} !</h3>
         </div>
-       
+       <div class="heading">
+           <center><h2><font color="Indigo">Welcome to Community Page !</font></h2></center>
+       </div>
      <div class="main">
          <div class="add-content">
              <form method="post" action="/media">
@@ -26,8 +28,8 @@
          {% for i in posts %}
          <div class="posts">
              
-                  <div class="date-email"><h3 id="email">{{i.email}}</h3><h3 id="date">{{i.date}}</h3></div>
-                  <h3 id="content">{{i.content}}</h3>
+                  <div class="date-email"><h4 id="email">{{i.email}}</h4><h4 id="date">{{i.date}}</h4></div>
+                  <h3 id="content"><em>{{i.content}}</em></h3>
             
             
          </div><br> {% endfor %}

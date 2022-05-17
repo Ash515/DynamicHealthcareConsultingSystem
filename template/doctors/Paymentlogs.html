@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="/static/images/icon.jpg" />
+        <title>Payment Logs</title>
+       <style>
+           body{
+               background-color: rgba(108, 153, 131, 0.514);
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           }
+            #report {
+              font-family: Arial, Helvetica, sans-serif;
+              border-collapse: collapse;
+              width:1000px;
+              margin-left: 250px;
+            }
+            
+            #report td, #report th {
+              border: 1px solid #ddd;
+              padding: 8px;
+            }
+            #report tr:nth-child(even){background-color: #f2f2f2;}
+            
+            #report tr:hover {background-color: #ddd;}
+            
+            #report th {
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #4CAF50;
+              color: white;
+            }
+            li{
+                list-style-type: none;
+            }
+            .title{
+                margin-left: 50px;
+                background-color: rgb(37, 11, 56);
+                color:white;
+                padding-left: 600px;
+                height:50px;
+                margin-right: 50px;
+            }
+            .name{
+                margin-left: 50px;
+            }
+            
+            </style>
+          
+    </head>
+    <body>
+        <div class="title">
+           
+        <h2>Payment Logs </h2>
+       </div>
+       <div class="name"> <h3>Hi {{ session.admin_email }}</h3></div>
+    <table id="report">
+        <tr>
+          <th>Email ID</th>
+          <th>Phone Number</th>
+          <th>Amount Paid</th>
+          <th>Date</th>
+
+          </tr>
+          <ul>
+          
+              <li>
+          <tr>
+            <td>dfsf</td>
+            <td>sdsdfsfd</td>
+            <td>swded</td>
+            <td>swded</td>
+        </tr>
+        </li>
+      
+    </ul>
+
+          </table> 
+</body>
+</html>
