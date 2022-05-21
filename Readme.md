@@ -46,4 +46,7 @@ problems.
 ## Image Results
 <img src="/Image Results/patient/img1.png">
 
+## Developer
+Ashwin Kumar R 
+
 
