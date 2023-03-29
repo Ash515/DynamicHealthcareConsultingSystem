@@ -44,7 +44,7 @@ problems.
 - Run this application at `http://127.0.0.1:5000/`.
 
 ## Image Results
-<img src="/Image Results/Patient/img1.png">
+<img src="/Image Results/Patient/img1.png"> <img src="/Image Results/Patient/img2.png">
 
 ## Developer 
 Ashwin Kumar R 
