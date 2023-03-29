@@ -1,4 +1,4 @@
-# Dynamic Healthcare Consulting System for Senior Citizens using Cloud Computing 
+## Dynamic Healthcare Consulting System 
 
 ## Introduction
 1. Taking care of our health is very important in now a day. We cannot able
