@@ -48,6 +48,8 @@ problems.
 <img src="/Image Results/Patient/img1.png" width="450px"> <img src="/Image Results/Patient/img2.png" width="450px">
 <img src="/Image Results/Patient/img3.png" width="450px"> <img src="/Image Results/Patient/img4.png" width="450px">
 <img src="/Image Results/Patient/img5.png" width="450px"> <img src="/Image Results/Patient/img6.png" width="450px">
+<img src="/Image Results/Patient/img7.png" width="450px"> <img src="/Image Results/Patient/img8.png" width="450px">
+<img src="/Image Results/Patient/img9.png" width="450px"> <img src="/Image Results/Patient/img10.png" width="450px">
 ## Developer 
 Ashwin Kumar R 
 
