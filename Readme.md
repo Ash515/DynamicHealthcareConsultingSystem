@@ -44,7 +44,7 @@ problems.
 - Run this application at `http://127.0.0.1:5000/`.
 
 ## Image Results
-[Click here]()
+[Click here](https://github.com/Ash515/DynamicHealthcareConsultingSystem/tree/master/Image%20Results)
 ## Developer 
 Ashwin Kumar R 
 
