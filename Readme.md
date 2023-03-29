@@ -44,8 +44,10 @@ problems.
 - Run this application at `http://127.0.0.1:5000/`.
 
 ## Image Results
-<img src="/Image Results/Patient/img1.png"> <img src="/Image Results/Patient/img2.png">
-
+### Patient interface
+<img src="/Image Results/Patient/img1.png" width="450px"> <img src="/Image Results/Patient/img2.png" width="450px">
+<img src="/Image Results/Patient/img3.png" width="450px"> <img src="/Image Results/Patient/img4.png" width="450px">
+<img src="/Image Results/Patient/img5.png" width="450px"> <img src="/Image Results/Patient/img6.png" width="450px">
 ## Developer 
 Ashwin Kumar R 
 
