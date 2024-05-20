@@ -2,34 +2,34 @@
 
 ## Introduction
 1. Taking care of our health is very important in now a day. We cannot able
-to concentrate on our health due to some important works especially employees
-and another side senior citizens were not able to go to hospital for small reasons
+to concentrate on our health due to some important work, especially employees
+and the side senior citizens were not able to go to the hospital for small reasons
 because of their health issues or uncomfortableness.
-2. To avoid these types of glitches we brought a solution through software system along with cloud
-computing technology. This software contains four modules which will make an
-impact for every one life. This application will help the people to live a healthy
-life in many ways as well as brings comfortable hospitability at their home itself.
-3. The first module is online counseling module, which will going to brings
-interaction between both users (patients) and the doctors through one single
+2. To avoid these types of glitches we brought a solution through a software system along with cloud
+computing technology. This software contains four modules that will make an
+impact on everyone's life. This application will help people to live a healthy
+life in many ways as well as bring comfortable hospitability to their homes.
+3. The first module is an online counseling module, which will be going to bring
+interaction between users (patients) and doctors through one single
 platform. The authenticated user will enter their health issue then based upon
-his/her location the application will collects the doctor’s information and listed in
-front from users’ interface along with their contact details, fees, availability and
-status. Then user can select any specialized doctor and counselled by them. After
-the payment only the prescription will get download in the users portal.
-4.In second module we embedded the online pharmacy system to buy the medical products
-by entering the key available in the prescription. The third module is that posting
-system, here the healthcare related suggestions, tips and guidance were get posted
-users can get benefit by that and they can write the commands for the respective
+his/her location the application will collect the doctor’s information and listed in
+front of the user’s interface along with their contact details, fees, availability, and
+status. Then users can select any specialized doctor and counsel them. After
+the payment, only the prescription will get downloaded to the user portal.
+4. In the second module we embedded the online pharmacy system to buy the medical products
+by entering the key available in the prescription. The third module is the posting
+system, here healthcare-related suggestions, tips, and guidance are posted
+users can benefit by that and they can write the commands for the respective
 posts. The last module is search engine-based result getting for our health-related
 problems.  
 
 ## Features
-- Opensource doctor patient connectivity.
-- Verified doctors can list out in the list for patients.
-- Patients can get the proper suggestion and treament plan by the doctors.
-- communication performs through **Email** and **Mobile Number**.
+- Opensource doctor-patient connectivity.
+- Verified doctors can be listed in the list for patients.
+- Patients can get the proper suggestions and treatment plans from the doctors.
+- communication is performed through verified Email and Mobile Numbers.
 
-## Benifits 
+## Benefits 
 - Can get treatment immediately.
 - Helpful for needy people.
 
